@@ -61,7 +61,6 @@ export const SpectaclesMen: React.FC = () => {
     loadGlasses();
   }, [currentPage, filterQuery]);
 
-
   return (
     <>
       {spectacles !== null
