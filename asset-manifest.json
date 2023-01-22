@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/bloobloom/static/css/main.073c9b0a.css",
-    "main.js": "/bloobloom/static/js/main.3de4350b.js",
-    "static/js/787.63c05b88.chunk.js": "/bloobloom/static/js/787.63c05b88.chunk.js",
-    "static/media/logo.svg": "/bloobloom/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/bloobloom/static/css/main.542552e1.css",
+    "main.js": "/bloobloom/static/js/main.7d969f4a.js",
+    "static/media/logo.svg": "/bloobloom/static/media/logo.d1cbc19fe98a12464eba94d5b1dfd756.svg",
     "index.html": "/bloobloom/index.html",
-    "main.073c9b0a.css.map": "/bloobloom/static/css/main.073c9b0a.css.map",
-    "main.3de4350b.js.map": "/bloobloom/static/js/main.3de4350b.js.map",
-    "787.63c05b88.chunk.js.map": "/bloobloom/static/js/787.63c05b88.chunk.js.map"
+    "static/media/right-arrow.svg": "/bloobloom/static/media/right-arrow.bf8d0dad2008581c391991633113b415.svg",
+    "main.542552e1.css.map": "/bloobloom/static/css/main.542552e1.css.map",
+    "main.7d969f4a.js.map": "/bloobloom/static/js/main.7d969f4a.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.3de4350b.js"
+    "static/css/main.542552e1.css",
+    "static/js/main.7d969f4a.js"
   ]
 }
