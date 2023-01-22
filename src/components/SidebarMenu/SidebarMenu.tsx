@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './SidebarMenu.scss';
 // import arrow from './img/right-arrow.svg';
 import { ReactComponent as RightArrow } from './img/right-arrow.svg';
@@ -16,6 +18,8 @@ export const SidebarMenu: React.FC<Props> = ({
   setIsSubmenuShown,
   isSubmenuShown,
 }) => {
+  const [currentCategory, setCurrentCategory] = useState('');
+
   return (
     <nav
       className={`sidebar-menu ${isShown ? 'menu-active' : ''}`}
@@ -25,7 +29,10 @@ export const SidebarMenu: React.FC<Props> = ({
       <ul className="sidebar-menu-list">
         <li
           className="sidebar-menu-item"
-          onMouseEnter={() => setIsSubmenuShown(true)}
+          onMouseEnter={() => {
+            setIsSubmenuShown(true);
+            setCurrentCategory('spectacles');
+          }}
           onMouseLeave={() => setIsSubmenuShown(false)}
         >
           <a className="sidebar-menu-item-link" href="/">spectacles</a>
@@ -33,7 +40,10 @@ export const SidebarMenu: React.FC<Props> = ({
         </li>
         <li
           className="sidebar-menu-item"
-          onMouseEnter={() => setIsSubmenuShown(true)}
+          onMouseEnter={() => {
+            setIsSubmenuShown(true);
+            setCurrentCategory('sunglasses');
+          }}
           onMouseLeave={() => setIsSubmenuShown(false)}
         >
           <a className="sidebar-menu-item-link" href="/">sunglasses</a>
@@ -57,15 +67,16 @@ export const SidebarMenu: React.FC<Props> = ({
           setIsSubmenuShown(false);
         }}
       >
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
         <li
           className="sidebar-submenu-item"
         >
-          <a className="sidebar-submenu-item-link" href="/">women</a>
+          <Link className="sidebar-submenu-item-link" to={`${currentCategory}-women`}>women</Link>
         </li>
         <li
           className="sidebar-submenu-item"
         >
-          <a className="sidebar-submenu-item-link" href="/">man</a>
+          <Link className="sidebar-submenu-item-link" to={`${currentCategory}-men`}>man</Link>
         </li>
       </ul>
     </nav>
