@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bloobloom/static/css/main.f67ace4c.css",
+    "main.css": "/bloobloom/static/css/main.09e96c48.css",
     "main.js": "/bloobloom/static/js/main.2b345862.js",
     "static/media/logo.svg": "/bloobloom/static/media/logo.d1cbc19fe98a12464eba94d5b1dfd756.svg",
     "index.html": "/bloobloom/index.html",
     "static/media/right-arrow.svg": "/bloobloom/static/media/right-arrow.bf8d0dad2008581c391991633113b415.svg",
-    "main.f67ace4c.css.map": "/bloobloom/static/css/main.f67ace4c.css.map",
+    "main.09e96c48.css.map": "/bloobloom/static/css/main.09e96c48.css.map",
     "main.2b345862.js.map": "/bloobloom/static/js/main.2b345862.js.map"
   },
   "entrypoints": [
-    "static/css/main.f67ace4c.css",
+    "static/css/main.09e96c48.css",
     "static/js/main.2b345862.js"
   ]
 }
