@@ -3,8 +3,12 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  border: 1px #000;
-  border-style: solid none;
+  border: 1px solid #000;
+
+  @media(min-width: 480px) {
+    border: 1px #000;
+    border-style: solid none;
+  }
 }
 
 .header a {
