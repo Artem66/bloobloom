@@ -1,0 +1,124 @@
+.filter-menu {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  // transition: 5s;
+  // transition: visibility 0s, opacity 0.5s linear;
+  // margin-bottom: 50px;
+  border-bottom: 1px solid;
+
+  @media(min-width: 480px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.colours-block,
+.shapes-block {
+  border-right: 1px solid;
+  display: grid;
+}
+
+.filter-menu-header {
+  border-bottom: 1px solid;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  height: 60px;
+  align-items: center;
+  display: grid;
+  margin: 0;
+  border-right: 1px solid;
+  border-left: 1px solid;
+
+  @media(min-width: 480px) {
+    border-right: none;
+    border-left: none;
+  }
+}
+
+.color-block,
+.shape-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr 2fr);
+  margin-bottom: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.shape-block {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.selected .shape-title {
+  text-decoration: underline;
+}
+
+.filter-menu .colors,
+.filter-menu .shapes {
+  border-right: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.colours-block .colors,
+.shapes-block .shapes {
+  border-right: 1px solid;
+  border-left: 1px solid;
+
+  @media(min-width: 480px) {
+    border-right: none;
+    border-left: none;
+  }
+}
+
+.colours-block .colors {
+  border-bottom: 1px solid;
+
+  @media(min-width: 480px) {
+    border-bottom: none;
+  }
+}
+
+.colour-bg {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-right: 7px;
+  border: 2px solid #fff;
+}
+
+.selected .colour-bg {
+  outline: 1px solid #000;
+}
+
+.black {
+  background-image: url("https://d32y5z2afvomc1.cloudfront.net/assets/filters_black_01.png");
+}
+
+.tortoise {
+  background-image: url("https://d32y5z2afvomc1.cloudfront.net/assets/filters_tortoise_02.png");
+}
+
+.coloured {
+  background-image: url("https://d32y5z2afvomc1.cloudfront.net/assets/filters_coloured_03.png");
+}
+
+.crystal {
+  background-image: url("https://d32y5z2afvomc1.cloudfront.net/assets/filters_crystal_04.png");
+}
+
+.dark {
+  background-image: url("https://d32y5z2afvomc1.cloudfront.net/assets/filters_dark_05.png");
+}
+
+.bright {
+  background-image: url("https://d32y5z2afvomc1.cloudfront.net/assets/filters_bright_06.png");
+}

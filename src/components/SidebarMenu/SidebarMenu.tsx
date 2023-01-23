@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './SidebarMenu.scss';
 // import arrow from './img/right-arrow.svg';
@@ -10,6 +10,8 @@ type Props = {
   isShown: boolean;
   setIsSubmenuShown: (shown: boolean) => void;
   isSubmenuShown: boolean;
+  currentCategory: string,
+  setCurrentCategory: (category: string) => void;
 };
 
 export const SidebarMenu: React.FC<Props> = ({
@@ -17,9 +19,9 @@ export const SidebarMenu: React.FC<Props> = ({
   isShown,
   setIsSubmenuShown,
   isSubmenuShown,
+  currentCategory,
+  setCurrentCategory,
 }) => {
-  const [currentCategory, setCurrentCategory] = useState('');
-
   return (
     <nav
       className={`sidebar-menu ${isShown ? 'menu-active' : ''}`}
@@ -35,7 +37,7 @@ export const SidebarMenu: React.FC<Props> = ({
           }}
           onMouseLeave={() => setIsSubmenuShown(false)}
         >
-          <a className="sidebar-menu-item-link" href="/">spectacles</a>
+          spectacles
           <RightArrow />
         </li>
         <li
@@ -46,7 +48,7 @@ export const SidebarMenu: React.FC<Props> = ({
           }}
           onMouseLeave={() => setIsSubmenuShown(false)}
         >
-          <a className="sidebar-menu-item-link" href="/">sunglasses</a>
+          sunglasses
           <RightArrow />
         </li>
         <li className="sidebar-menu-item">
@@ -68,16 +70,39 @@ export const SidebarMenu: React.FC<Props> = ({
         }}
       >
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
-        <li
-          className="sidebar-submenu-item"
+        <Link
+          className="sidebar-submenu-item sidebar-submenu-item-link"
+          to={`${currentCategory}-women`}
+          // onTouchEnd={() => {
+          //   setIsSubmenuShown(false);
+          //   setIsShown(false);
+          // }}
+          onClick={() => {
+            setIsSubmenuShown(false);
+            setIsShown(false);
+          }}
         >
-          <Link className="sidebar-submenu-item-link" to={`${currentCategory}-women`}>women</Link>
-        </li>
-        <li
-          className="sidebar-submenu-item"
+          women
+        </Link>
+        <Link
+          to={`${currentCategory}-men`}
+          className="sidebar-submenu-item sidebar-submenu-item-link"
+          onClick={() => {
+            setIsSubmenuShown(false);
+            setIsShown(false);
+          }}
         >
-          <Link className="sidebar-submenu-item-link" to={`${currentCategory}-men`}>man</Link>
-        </li>
+          {/* <Link
+            className="sidebar-submenu-item-link"
+            to={`${currentCategory}-men`}
+            onTouchEnd={() => {
+              setIsSubmenuShown(false);
+              setIsShown(false);
+            }}
+          > */}
+          man
+          {/* </Link> */}
+        </Link>
       </ul>
     </nav>
   );
