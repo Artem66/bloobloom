@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './SidebarMenu.scss';
-// import arrow from './img/right-arrow.svg';
 import { ReactComponent as RightArrow } from './img/right-arrow.svg';
 
 type Props = {
@@ -73,10 +72,6 @@ export const SidebarMenu: React.FC<Props> = ({
         <Link
           className="sidebar-submenu-item sidebar-submenu-item-link"
           to={`${currentCategory}-women`}
-          // onTouchEnd={() => {
-          //   setIsSubmenuShown(false);
-          //   setIsShown(false);
-          // }}
           onClick={() => {
             setIsSubmenuShown(false);
             setIsShown(false);
@@ -92,16 +87,7 @@ export const SidebarMenu: React.FC<Props> = ({
             setIsShown(false);
           }}
         >
-          {/* <Link
-            className="sidebar-submenu-item-link"
-            to={`${currentCategory}-men`}
-            onTouchEnd={() => {
-              setIsSubmenuShown(false);
-              setIsShown(false);
-            }}
-          > */}
-          man
-          {/* </Link> */}
+          men
         </Link>
       </ul>
     </nav>

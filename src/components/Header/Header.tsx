@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 import logo from './img/logo.svg';
 
@@ -14,12 +15,12 @@ export const Header: React.FC<Props> = ({ setIsShown }) => {
           className="header__left-menu"
           onMouseLeave={() => setIsShown(false)}
         >
-          <a
-            href="/#"
+          <Link
+            to="/"
             onMouseEnter={() => setIsShown(true)}
           >
             Menu
-          </a>
+          </Link>
         </div>
         <div className="header__logo">
           <img src={logo} alt="bloobloom logo" />
