@@ -18,7 +18,7 @@ export const SunglassesWomen: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [spectaclesLenght, setSpectaclesLenght] = useState(0);
 
-  const category = 'suglasses women';
+  const category = 'sunglasses women';
 
   window.onscroll = () => {
     if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight
