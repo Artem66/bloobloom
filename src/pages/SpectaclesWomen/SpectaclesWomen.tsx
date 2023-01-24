@@ -7,21 +7,7 @@ import './SpectaclesWomen.scss';
 import { getSpectaclesWoman } from '../../api/glasses';
 import { HeaderProductCatalog } from '../../components/HeaderProductCatalog';
 import { Filter } from '../../components/Filter';
-
-// type FrameVariant = {
-// };
-
-// type Media = {
-//   file_location: string,
-//   file_name: string,
-//   id: number,
-//   medium_type: string,
-//   mime_type: string,
-//   original_file_name: string,
-//   position: number,
-//   size: number
-//   url: string,
-// };
+import { Loader } from '../../components/Loader';
 
 export const SpectaclesWomen: React.FC = () => {
   const [spectacles, setSpectacles] = useState<Glasses[]>([]);
@@ -29,17 +15,19 @@ export const SpectaclesWomen: React.FC = () => {
   const [isFilterMenu, setIsFilterMenu] = useState(false);
   const [filterQuery, setFilterQuery] = useState('');
   const [selectedFilter, setSelectedFilter] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [spectaclesLenght, setSpectaclesLenght] = useState(0);
 
   const category = 'spectacles women';
 
   window.onscroll = () => {
-    // eslint-disable-next-line max-len
-    if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
+    if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight
+      && currentPage < currentPage + 1
+      && spectacles.length > spectaclesLenght) {
       setCurrentPage(currentPage + 1);
     }
   };
 
-  // eslint-disable-next-line max-len
   const handleClickColor = (addFilter: string) => {
     setFilterQuery(`${filterQuery}${addFilter}`);
     if (addFilter.includes('glass_variant_frame_variant_frame_tag_configuration_names')) {
@@ -49,15 +37,15 @@ export const SpectaclesWomen: React.FC = () => {
     if (addFilter.includes('glass_variant_frame_variant_colour_tag_configuration_names')) {
       setSelectedFilter([...selectedFilter, addFilter]);
     }
-    // eslint-disable-next-line max-len
 
+    setCurrentPage(1);
     setSpectacles([]);
   };
 
   const handleRemoveFilter = (filterName: string): void => {
-    // console.log('remove???');
-    setFilterQuery(filterQuery.replace(filterName, ''));
     setSpectacles([]);
+    setCurrentPage(1);
+    setFilterQuery(filterQuery.replace(filterName, ''));
     setSelectedFilter(selectedFilter.filter(filter => filter !== filterName));
   };
 
@@ -72,14 +60,18 @@ export const SpectaclesWomen: React.FC = () => {
       if (spectacles?.length === 0) {
         setSpectacles(res.glasses);
       }
+
+      setSpectaclesLenght(spectacles.length);
+      setIsLoading(false);
     } catch {
       throw new Error('Error loading phones');
     }
-  }, [currentPage, filterQuery]);
+  }, [currentPage, filterQuery, selectedFilter]);
 
   useEffect(() => {
+    setIsLoading(true);
     loadGlasses();
-  }, [currentPage, filterQuery]);
+  }, [currentPage, filterQuery, selectedFilter]);
 
   return (
     <>
@@ -121,6 +113,7 @@ export const SpectaclesWomen: React.FC = () => {
                 </div>
               ))}
             </div>
+            {isLoading && <Loader />}
           </>
         )
         : (<h1>Loading...</h1>)}
