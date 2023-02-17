@@ -6,6 +6,7 @@ import { SpectaclesMen } from './pages/SpectaclesMen';
 import { SunglassesWomen } from './pages/SunglassesWomen';
 import { SpectaclesWomen } from './pages/SpectaclesWomen';
 import { SunglassesMen } from './pages/SunglassesMen';
+import { HomePage } from './pages/HomePage';
 
 function App() {
   const [isShown, setIsShown] = useState(false);
@@ -24,7 +25,7 @@ function App() {
         setCurrentCategory={setCurrentCategory}
       />
       <Routes>
-        <Route path="/" element={<SpectaclesWomen />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/spectacles-women" element={<SpectaclesWomen />} />
         <Route path="/spectacles-men" element={<SpectaclesMen />} />
         <Route path="/sunglasses-women" element={<SunglassesWomen />} />

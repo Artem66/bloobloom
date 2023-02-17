@@ -20,3 +20,8 @@ export const getSunglassesMen = (currentPage = 1, filter = '') => {
 export const getSpectaclesWomanColourTortoise = (currentPage = 1) => {
   return client.get<Glasses>(`spectacles-women/glasses?page%5Blimit%5D=12&page%5Bnumber%5D=${currentPage}&filters%5Bglass_variant_frame_variant_colour_tag_configuration_names%5D%5B%5D=tortoise`);
 };
+
+export const getBestSellers = () => {
+  // eslint-disable-next-line max-len
+  return client.get<Glasses>('spectacles-women/glasses?sort[type]=collection_relations_position&sort[order]=asc&filters[lens_variant_prescriptions][]=fashion&filters[lens_variant_types][]=classic&page[limit]=4');
+};
