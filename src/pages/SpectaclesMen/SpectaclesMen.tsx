@@ -64,7 +64,7 @@ export const SpectaclesMen: React.FC = () => {
       setSpectaclesLenght(spectacles.length);
       setIsLoading(false);
     } catch {
-      throw new Error('Error loading phones');
+      throw new Error('Error loading glasses');
     }
   }, [currentPage, filterQuery, selectedFilter]);
 
