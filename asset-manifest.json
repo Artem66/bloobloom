@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/bloobloom/static/css/main.b6460f01.css",
-    "main.js": "/bloobloom/static/js/main.2e6761a5.js",
+    "main.css": "/bloobloom/static/css/main.6903a828.css",
+    "main.js": "/bloobloom/static/js/main.3d86104b.js",
+    "static/media/Bloobloom-Home_page-3.jpeg": "/bloobloom/static/media/Bloobloom-Home_page-3.dcddd2dfbd1ebd915429.jpeg",
+    "static/media/Bloobloom-Home_page-Spectacles-2.jpeg": "/bloobloom/static/media/Bloobloom-Home_page-Spectacles-2.2cb748a1828c78408666.jpeg",
+    "static/media/Bloobloom-Home_page-Spectacles-3.jpeg": "/bloobloom/static/media/Bloobloom-Home_page-Spectacles-3.addbc28f33489fa37674.jpeg",
+    "static/media/Bloobloom-Home_page-2.jpeg": "/bloobloom/static/media/Bloobloom-Home_page-2.9bf9f28454b74e148902.jpeg",
+    "static/media/Bloobloom-Home_page-Sunglasses-3.jpeg": "/bloobloom/static/media/Bloobloom-Home_page-Sunglasses-3.f870f25b0bf5362494d2.jpeg",
+    "static/media/Bloobloom-Home_page-1.jpeg": "/bloobloom/static/media/Bloobloom-Home_page-1.cb623f81185021726afc.jpeg",
+    "static/media/Bloobloom-Home_page-Spectacles-1.jpeg": "/bloobloom/static/media/Bloobloom-Home_page-Spectacles-1.ad0624342c5be4a610bd.jpeg",
+    "static/media/Bloobloom-Home_page-Sunglasses-1.jpeg": "/bloobloom/static/media/Bloobloom-Home_page-Sunglasses-1.e8200ec6543ff416b4b1.jpeg",
+    "static/media/Bloobloom-Home_page-Sunglasses-2.jpeg": "/bloobloom/static/media/Bloobloom-Home_page-Sunglasses-2.c31812767d6499be6c29.jpeg",
     "static/media/logo.svg": "/bloobloom/static/media/logo.d1cbc19fe98a12464eba94d5b1dfd756.svg",
     "index.html": "/bloobloom/index.html",
     "static/media/right-arrow.svg": "/bloobloom/static/media/right-arrow.bf8d0dad2008581c391991633113b415.svg",
-    "main.b6460f01.css.map": "/bloobloom/static/css/main.b6460f01.css.map",
-    "main.2e6761a5.js.map": "/bloobloom/static/js/main.2e6761a5.js.map"
+    "main.6903a828.css.map": "/bloobloom/static/css/main.6903a828.css.map",
+    "main.3d86104b.js.map": "/bloobloom/static/js/main.3d86104b.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6460f01.css",
-    "static/js/main.2e6761a5.js"
+    "static/css/main.6903a828.css",
+    "static/js/main.3d86104b.js"
   ]
 }
